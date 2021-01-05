@@ -1,0 +1,14 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as ec
+
+""" check if driver executable Chrome/Firefox
+use: sudo chmod +x {driver_name}
+move/copy: sudo cp/mv {driver_name} /usr/local/bin """
+
+pytest:
+-v - режим verbous (многословный). Детально расскажет о прохождении.
+
+-rx - report on XFAIL (отчитаться о наличии метки XFAIL). В целом, даже без (remark = "") покажет в каком тесте была метка.
+--tb=line - вывод результатов без служебной инфы
